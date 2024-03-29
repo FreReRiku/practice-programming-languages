@@ -51,7 +51,10 @@ int main(int argc, char **argv)
         residue = residue / i;
     }
 
-    for (i = 3; i < input_number; i += 2) {
+    for (
+        i = 3; 
+        i <= input_number;  // 境界値エラーを修正した。
+        i += 2) {
         while (residue % i == 0) {
             printf("%d ", i);
             residue = residue / i;
