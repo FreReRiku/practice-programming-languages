@@ -1,0 +1,3 @@
+# .gitignoreファイル記載項目
+# executable_files直下のファイルを除外する(実行ファイル)
+executable_files/
