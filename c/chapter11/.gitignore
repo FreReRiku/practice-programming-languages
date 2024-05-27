@@ -1,0 +1,7 @@
+# 実行ファイルが格納されているディレクトリを除外
+/lecture/executable_files/
+
+# 練習問題ディレクトリ内のmarkdownファイルとC言語ソースファイル以外を除外
+/exercises/*
+!/exercises/*.md
+!/exercises/*.c
