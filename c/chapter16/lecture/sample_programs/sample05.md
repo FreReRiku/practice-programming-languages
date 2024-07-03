@@ -61,7 +61,7 @@ typedef struct
     char name[64];  /* 名前 */
     double stature; /* 身長 */
     double weight;  /* 体重 */
-};
+} student;
 ```
 
 この方法が、1番簡潔に構造体型を宣言できます。
