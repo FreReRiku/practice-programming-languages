@@ -19,7 +19,7 @@
 int main(void)
 {
     FILE * file;
-    file = fopen("text.txt", "w");
+    file = fopen("test.txt", "w");
     fprintf(file, "Hello,world\n");
     fclose(file);
 
@@ -27,6 +27,6 @@ int main(void)
 }
 
 /*
- * このプログラムを実行すると、text.txtファイルの中身は次のようになります。
- * text.txtファイルは、実行ファイルと同じフォルダに作られます。
+ * このプログラムを実行すると、test.txtファイルの中身は次のようになります。
+ * test.txtファイルは、実行ファイルと同じフォルダに作られます。
  */
