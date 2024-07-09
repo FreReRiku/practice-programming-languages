@@ -33,6 +33,6 @@ Temporary Items
 !/exercises/*.md
 !/exercises/*.c
 
-# 実行に生成されるtxtファイルを除外
+# 実行に生成されるtxtファイルとdatファイルを除外
 /lecture/sample_programs/*.txt
-
+/lecture/sample_programs/*.dat
