@@ -10,9 +10,7 @@ int main(void)
     int len_array = sizeof(array) / sizeof(array[0]);
 
     for (int i = 0; i < len_array; i++) {
-        if (!i) {
-            printf("%d\n", array[i]);
-        } else {
+        if (i) {
             printf("%d\n", array[i - 1] - array[i]);
         }
     }
