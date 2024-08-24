@@ -52,6 +52,30 @@ print(m) # 0.12
 # Pythonは数値だけでなくテキスト(いわゆる「文字列」であるstr型によって表現されます)を扱うことができます。
 # 文字列はシングルクォート('...')または("...")で囲み、どちらを使っても違いはありません。
 
+# クォートの中でクォートを使いたい場合、\を前に付け加えることで「エスケープ」する必要があります。もしくは、文字列で使用したいクォートとは別の方のクォートで囲むこともできます。
+
+print('doesn\'t') # use \' to the single quote...
+print("doesn't") # ...or use double quotes instead
+print('"Yes," they said.')
+print('"\"Yes,\" they said.')
+print('"Isn\'t," they said.')
+
+# Pythonシェルでは、文字列を定義するときと文字列が出力されるときでは見え方が異なることがあります。
+# print()関数を使うと、両端のクォートがなくなり、エスケープされた文字や特殊文字が表示されるため、より読みやすい形で出力できます。
+
+s = 'First line.\nSecond line.' # \n means newline
+# >>> s # without print(), special characters are included in the string
+print(s) # with print(), special characters are interpreted, so \n produces new line
+
+# \に続く文字を特殊文字として解釈されたくない場合は、最初の引用符の前にrを就けたraw strings が使えます。
+print('C:\some\name') # here \n means newline!
+# C:\some
+# ame
+print(r'C:\some\name') # note the r before the quote
+
+# raw文字列には微妙な面があります：raw文字列は奇数個の引用符文字(' or ")では終了できません。
+# 文字列リテラルは複数行にまたがって書けます。1つの方法は三連引用符("""..."""や'''...''')を使うことです。改行文字は自動的に文字列に含まれますが、行末に\をつけることで含めないようにすることもできます。
+
 # 文字列はインデックス(添字)を指定して文字を取得できます。最初の文字のインデックスは0になります。文字を表す、専用のデータ型は用意されていません(C言語でいうところのchar型)。文字とは、単に長さが1の文字列です。
 
 word = 'Python'
@@ -69,4 +93,5 @@ print(word[-6])
 # インデックス表記は個々の文字を取得するのに使いますが、スライスを使うと部分文字列を取得することができます。
 print(word[0:2]) # characters from position 0 (included) to 2 (excluded)
 print(word[2:5]) # characters from position 2 (included) to 5 (excluded)
+
 
