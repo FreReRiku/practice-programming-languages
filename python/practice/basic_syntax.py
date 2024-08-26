@@ -76,6 +76,29 @@ print(r'C:\some\name') # note the r before the quote
 # raw文字列には微妙な面があります：raw文字列は奇数個の引用符文字(' or ")では終了できません。
 # 文字列リテラルは複数行にまたがって書けます。1つの方法は三連引用符("""..."""や'''...''')を使うことです。改行文字は自動的に文字列に含まれますが、行末に\をつけることで含めないようにすることもできます。
 
+print("""\
+Usage: thingy[OPTIONS]
+      -h                Display this usage message
+      -H hostname       Hostname to connect to
+""")
+
+# 文字列は+演算子で連結させる(くっつけて一つにする)ことができ、*演算子で反復させることができます。
+print(3 * 'un' + 'ium')
+
+# 連続して並んでいる複数の文字列リテラル(つまり、引用符に囲われた文字列)は、自動的に連結されます。
+print('Py' 'thon')
+
+# この機能は、長い文字列を改行したいときにとても役立ちます。
+text = ('Put several strings within parentheses '
+        'to have them joined together.')
+
+print(text)
+
+# [注意]これは2つのリテラルどうしに対してのみ働き、変数や式には働きません。
+# 変数どうしや変数とリテラルを連結したい場合は、+を使ってください。
+prefix = 'Py'
+print(prefix + 'thon')
+
 # 文字列はインデックス(添字)を指定して文字を取得できます。最初の文字のインデックスは0になります。文字を表す、専用のデータ型は用意されていません(C言語でいうところのchar型)。文字とは、単に長さが1の文字列です。
 
 word = 'Python'
@@ -94,4 +117,9 @@ print(word[-6])
 print(word[0:2]) # characters from position 0 (included) to 2 (excluded)
 print(word[2:5]) # characters from position 2 (included) to 5 (excluded)
 
+# スライスのインデックスには、便利なデフォルト値があります; 最初のインデックスを省略すると、0とみなされます。2番目のインデックスを省略すると、スライスする文字列のサイズとみなされます。
+
+print(word[:2])  # characters from the beginning to to position 2 (excluded)
+print(word[4:])  # characters from position 4 (included) to the end
+print(word[-2:]) # characters from the second-last (included) to the end
 
